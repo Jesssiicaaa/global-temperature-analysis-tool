@@ -1,11 +1,12 @@
 # 🌡️ Global Temperature Analysis
 
-scripts/q11_plot.gnu
-[text](scripts/q10_plot.gnu)
-[text](scripts/q9_plot.gnu)
-[text](scripts/q8_plot.gnu)
-[text](scripts/q7_plot.gnu)
-[text](scripts/q6_plot.gnu)
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/7ef9071f-1027-478c-9251-8f62b13c5e21" />
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/fad66449-9343-459a-8cbd-d0906ff0fd54" />
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/c51c00a8-f5a7-4c8c-935c-3f10b4932157" />
+<img width="1200" height="900" alt="image" src="https://github.com/user-attachments/assets/f39f7ffc-719b-4529-9d23-8c20723473b1" />
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/b68b4539-1c1c-4515-b0c8-4504068e1b9f" />
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/f317cccc-840c-4b0e-8a53-c37f19bc81ea" />
+
 > Analysis of global land and ocean temperatures from **1750 to 2015** using C and GNUPlot. Built as a term project for CPS188 at Toronto Metropolitan University (Winter 2024).
 
 ---
