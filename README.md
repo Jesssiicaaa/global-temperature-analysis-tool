@@ -1,6 +1,6 @@
 # 🌡️ Global Temperature Analysis
 
-[text](scripts/q11_plot.gnu)
+scripts/q11_plot.gnu
 [text](scripts/q10_plot.gnu)
 [text](scripts/q9_plot.gnu)
 [text](scripts/q8_plot.gnu)
