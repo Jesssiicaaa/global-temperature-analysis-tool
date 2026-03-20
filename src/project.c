@@ -44,7 +44,7 @@ typedef struct {
     int  hasLandOcean;
 } Record;
 
-Record data[MAX_ROWS];
+Record data[MAX_ROWS];// Array to hold all records, 3200 records is more than enough for 1760-2015 monthly data (3060 months)
 int    nRecords = 0;
 
 /* ------------------------------------------------------------------ */
