@@ -1,0 +1,350 @@
+Loaded 3192 records from data/GlobalTemperatures.csv
+
+=======================================================
+QUESTION 1: Yearly averages (1760-2015)
+=======================================================
+Year 1760 : 7.1852 C  (12 months)
+Year 1761 : 8.7725 C  (12 months)
+Year 1762 : 8.6065 C  (12 months)
+Year 1763 : 7.4967 C  (12 months)
+Year 1764 : 8.4003 C  (12 months)
+Year 1765 : 8.2519 C  (12 months)
+Year 1766 : 8.4057 C  (12 months)
+Year 1767 : 8.2215 C  (12 months)
+Year 1768 : 6.7813 C  (12 months)
+Year 1769 : 7.6946 C  (12 months)
+Year 1770 : 7.6919 C  (12 months)
+Year 1771 : 7.8532 C  (12 months)
+Year 1772 : 8.1935 C  (12 months)
+Year 1773 : 8.2215 C  (12 months)
+Year 1774 : 8.7722 C  (12 months)
+Year 1775 : 9.1831 C  (12 months)
+Year 1776 : 8.3040 C  (12 months)
+Year 1777 : 8.2562 C  (12 months)
+Year 1778 : 8.5422 C  (12 months)
+Year 1779 : 8.9832 C  (12 months)
+Year 1780 : 9.4329 C  (12 months)
+Year 1781 : 8.1026 C  (12 months)
+Year 1782 : 7.9012 C  (12 months)
+Year 1783 : 7.6808 C  (12 months)
+Year 1784 : 7.8620 C  (12 months)
+Year 1785 : 7.3630 C  (12 months)
+Year 1786 : 8.2582 C  (12 months)
+Year 1787 : 8.0318 C  (12 months)
+Year 1788 : 8.4472 C  (12 months)
+Year 1789 : 8.3342 C  (12 months)
+Year 1790 : 7.9823 C  (12 months)
+Year 1791 : 8.2342 C  (12 months)
+Year 1792 : 8.0890 C  (12 months)
+Year 1793 : 8.2292 C  (12 months)
+Year 1794 : 8.5260 C  (12 months)
+Year 1795 : 8.3503 C  (12 months)
+Year 1796 : 8.2710 C  (12 months)
+Year 1797 : 8.5106 C  (12 months)
+Year 1798 : 8.6703 C  (12 months)
+Year 1799 : 8.5057 C  (12 months)
+Year 1800 : 8.4843 C  (12 months)
+Year 1801 : 8.5897 C  (12 months)
+Year 1802 : 8.5782 C  (12 months)
+Year 1803 : 8.5030 C  (12 months)
+Year 1804 : 8.8448 C  (12 months)
+Year 1805 : 8.5627 C  (12 months)
+Year 1806 : 8.4341 C  (12 months)
+Year 1807 : 8.2814 C  (12 months)
+Year 1808 : 7.6268 C  (12 months)
+Year 1809 : 7.0764 C  (12 months)
+Year 1810 : 6.9227 C  (12 months)
+Year 1811 : 6.8595 C  (12 months)
+Year 1812 : 7.0463 C  (12 months)
+Year 1813 : 7.7399 C  (12 months)
+Year 1814 : 7.5918 C  (12 months)
+Year 1815 : 7.2393 C  (12 months)
+Year 1816 : 6.9375 C  (12 months)
+Year 1817 : 6.9757 C  (12 months)
+Year 1818 : 7.8289 C  (12 months)
+Year 1819 : 7.3692 C  (12 months)
+Year 1820 : 7.6162 C  (12 months)
+Year 1821 : 8.0901 C  (12 months)
+Year 1822 : 8.1883 C  (12 months)
+Year 1823 : 7.7187 C  (12 months)
+Year 1824 : 8.5472 C  (12 months)
+Year 1825 : 8.3893 C  (12 months)
+Year 1826 : 8.3566 C  (12 months)
+Year 1827 : 8.8087 C  (12 months)
+Year 1828 : 8.1653 C  (12 months)
+Year 1829 : 7.9418 C  (12 months)
+Year 1830 : 8.5168 C  (12 months)
+Year 1831 : 7.6392 C  (12 months)
+Year 1832 : 7.4502 C  (12 months)
+Year 1833 : 8.0130 C  (12 months)
+Year 1834 : 8.1468 C  (12 months)
+Year 1835 : 7.3925 C  (12 months)
+Year 1836 : 7.6958 C  (12 months)
+Year 1837 : 7.3757 C  (12 months)
+Year 1838 : 7.5149 C  (12 months)
+Year 1839 : 7.6322 C  (12 months)
+Year 1840 : 7.7963 C  (12 months)
+Year 1841 : 7.6882 C  (12 months)
+Year 1842 : 8.0228 C  (12 months)
+Year 1843 : 8.1737 C  (12 months)
+Year 1844 : 7.6463 C  (12 months)
+Year 1845 : 7.8512 C  (12 months)
+Year 1846 : 8.5527 C  (12 months)
+Year 1847 : 8.0860 C  (12 months)
+Year 1848 : 7.9795 C  (12 months)
+Year 1849 : 7.9844 C  (12 months)
+Year 1850 : 7.9007 C  (12 months)
+Year 1851 : 8.1786 C  (12 months)
+Year 1852 : 8.1002 C  (12 months)
+Year 1853 : 8.0418 C  (12 months)
+Year 1854 : 8.2105 C  (12 months)
+Year 1855 : 8.1107 C  (12 months)
+Year 1856 : 7.9959 C  (12 months)
+Year 1857 : 7.7582 C  (12 months)
+Year 1858 : 8.1003 C  (12 months)
+Year 1859 : 8.2520 C  (12 months)
+Year 1860 : 7.9608 C  (12 months)
+Year 1861 : 7.8465 C  (12 months)
+Year 1862 : 7.5586 C  (12 months)
+Year 1863 : 8.1118 C  (12 months)
+Year 1864 : 7.9836 C  (12 months)
+Year 1865 : 8.1778 C  (12 months)
+Year 1866 : 8.2922 C  (12 months)
+Year 1867 : 8.4363 C  (12 months)
+Year 1868 : 8.2479 C  (12 months)
+Year 1869 : 8.4321 C  (12 months)
+Year 1870 : 8.2013 C  (12 months)
+Year 1871 : 8.1151 C  (12 months)
+Year 1872 : 8.1938 C  (12 months)
+Year 1873 : 8.3511 C  (12 months)
+Year 1874 : 8.4335 C  (12 months)
+Year 1875 : 7.8596 C  (12 months)
+Year 1876 : 8.0801 C  (12 months)
+Year 1877 : 8.5396 C  (12 months)
+Year 1878 : 8.8298 C  (12 months)
+Year 1879 : 8.1658 C  (12 months)
+Year 1880 : 8.1187 C  (12 months)
+Year 1881 : 8.2709 C  (12 months)
+Year 1882 : 8.1289 C  (12 months)
+Year 1883 : 7.9769 C  (12 months)
+Year 1884 : 7.7737 C  (12 months)
+Year 1885 : 7.9197 C  (12 months)
+Year 1886 : 7.9545 C  (12 months)
+Year 1887 : 7.9149 C  (12 months)
+Year 1888 : 8.0905 C  (12 months)
+Year 1889 : 8.3190 C  (12 months)
+Year 1890 : 7.9717 C  (12 months)
+Year 1891 : 8.0193 C  (12 months)
+Year 1892 : 8.0658 C  (12 months)
+Year 1893 : 8.0567 C  (12 months)
+Year 1894 : 8.1610 C  (12 months)
+Year 1895 : 8.1470 C  (12 months)
+Year 1896 : 8.2149 C  (12 months)
+Year 1897 : 8.2933 C  (12 months)
+Year 1898 : 8.1780 C  (12 months)
+Year 1899 : 8.3963 C  (12 months)
+Year 1900 : 8.5016 C  (12 months)
+Year 1901 : 8.5419 C  (12 months)
+Year 1902 : 8.3044 C  (12 months)
+Year 1903 : 8.2202 C  (12 months)
+Year 1904 : 8.0909 C  (12 months)
+Year 1905 : 8.2252 C  (12 months)
+Year 1906 : 8.3791 C  (12 months)
+Year 1907 : 7.9472 C  (12 months)
+Year 1908 : 8.1861 C  (12 months)
+Year 1909 : 8.1783 C  (12 months)
+Year 1910 : 8.2230 C  (12 months)
+Year 1911 : 8.1770 C  (12 months)
+Year 1912 : 8.1654 C  (12 months)
+Year 1913 : 8.2977 C  (12 months)
+Year 1914 : 8.5905 C  (12 months)
+Year 1915 : 8.5932 C  (12 months)
+Year 1916 : 8.2253 C  (12 months)
+Year 1917 : 8.0233 C  (12 months)
+Year 1918 : 8.1308 C  (12 months)
+Year 1919 : 8.3823 C  (12 months)
+Year 1920 : 8.3588 C  (12 months)
+Year 1921 : 8.5710 C  (12 months)
+Year 1922 : 8.4080 C  (12 months)
+Year 1923 : 8.4222 C  (12 months)
+Year 1924 : 8.5068 C  (12 months)
+Year 1925 : 8.5344 C  (12 months)
+Year 1926 : 8.7288 C  (12 months)
+Year 1927 : 8.5221 C  (12 months)
+Year 1928 : 8.6322 C  (12 months)
+Year 1929 : 8.2424 C  (12 months)
+Year 1930 : 8.6336 C  (12 months)
+Year 1931 : 8.7193 C  (12 months)
+Year 1932 : 8.7053 C  (12 months)
+Year 1933 : 8.3383 C  (12 months)
+Year 1934 : 8.6283 C  (12 months)
+Year 1935 : 8.5158 C  (12 months)
+Year 1936 : 8.5540 C  (12 months)
+Year 1937 : 8.6983 C  (12 months)
+Year 1938 : 8.8637 C  (12 months)
+Year 1939 : 8.7603 C  (12 months)
+Year 1940 : 8.7647 C  (12 months)
+Year 1941 : 8.7687 C  (12 months)
+Year 1942 : 8.7284 C  (12 months)
+Year 1943 : 8.7551 C  (12 months)
+Year 1944 : 8.8450 C  (12 months)
+Year 1945 : 8.5848 C  (12 months)
+Year 1946 : 8.6769 C  (12 months)
+Year 1947 : 8.7971 C  (12 months)
+Year 1948 : 8.7468 C  (12 months)
+Year 1949 : 8.5868 C  (12 months)
+Year 1950 : 8.3653 C  (12 months)
+Year 1951 : 8.6257 C  (12 months)
+Year 1952 : 8.6383 C  (12 months)
+Year 1953 : 8.8738 C  (12 months)
+Year 1954 : 8.5607 C  (12 months)
+Year 1955 : 8.6263 C  (12 months)
+Year 1956 : 8.2796 C  (12 months)
+Year 1957 : 8.7325 C  (12 months)
+Year 1958 : 8.7738 C  (12 months)
+Year 1959 : 8.7327 C  (12 months)
+Year 1960 : 8.5838 C  (12 months)
+Year 1961 : 8.7977 C  (12 months)
+Year 1962 : 8.7459 C  (12 months)
+Year 1963 : 8.8560 C  (12 months)
+Year 1964 : 8.4097 C  (12 months)
+Year 1965 : 8.5274 C  (12 months)
+Year 1966 : 8.5993 C  (12 months)
+Year 1967 : 8.7001 C  (12 months)
+Year 1968 : 8.5163 C  (12 months)
+Year 1969 : 8.5951 C  (12 months)
+Year 1970 : 8.7009 C  (12 months)
+Year 1971 : 8.5992 C  (12 months)
+Year 1972 : 8.4996 C  (12 months)
+Year 1973 : 8.9482 C  (12 months)
+Year 1974 : 8.4675 C  (12 months)
+Year 1975 : 8.7448 C  (12 months)
+Year 1976 : 8.3472 C  (12 months)
+Year 1977 : 8.8502 C  (12 months)
+Year 1978 : 8.6927 C  (12 months)
+Year 1979 : 8.7334 C  (12 months)
+Year 1980 : 8.9803 C  (12 months)
+Year 1981 : 9.1658 C  (12 months)
+Year 1982 : 8.6392 C  (12 months)
+Year 1983 : 9.0282 C  (12 months)
+Year 1984 : 8.6918 C  (12 months)
+Year 1985 : 8.6580 C  (12 months)
+Year 1986 : 8.8336 C  (12 months)
+Year 1987 : 8.9944 C  (12 months)
+Year 1988 : 9.2016 C  (12 months)
+Year 1989 : 8.9220 C  (12 months)
+Year 1990 : 9.2342 C  (12 months)
+Year 1991 : 9.1794 C  (12 months)
+Year 1992 : 8.8366 C  (12 months)
+Year 1993 : 8.8666 C  (12 months)
+Year 1994 : 9.0387 C  (12 months)
+Year 1995 : 9.3471 C  (12 months)
+Year 1996 : 9.0389 C  (12 months)
+Year 1997 : 9.2026 C  (12 months)
+Year 1998 : 9.5227 C  (12 months)
+Year 1999 : 9.2851 C  (12 months)
+Year 2000 : 9.2012 C  (12 months)
+Year 2001 : 9.4146 C  (12 months)
+Year 2002 : 9.5704 C  (12 months)
+Year 2003 : 9.5256 C  (12 months)
+Year 2004 : 9.3246 C  (12 months)
+Year 2005 : 9.7009 C  (12 months)
+Year 2006 : 9.5325 C  (12 months)
+Year 2007 : 9.7322 C  (12 months)
+Year 2008 : 9.4318 C  (12 months)
+Year 2009 : 9.5053 C  (12 months)
+Year 2010 : 9.7031 C  (12 months)
+Year 2011 : 9.5160 C  (12 months)
+Year 2012 : 9.5073 C  (12 months)
+Year 2013 : 9.6065 C  (12 months)
+Year 2014 : 9.5707 C  (12 months)
+Year 2015 : 9.8310 C  (12 months)
+
+=======================================================
+QUESTION 2: Average land temperature per century
+=======================================================
+18th century (1760-1799) : 8.2150 C
+19th century (1800-1899) : 8.0091 C
+20th century (1900-1999) : 8.6377 C
+21st century (2000-2015) : 9.5421 C
+
+=======================================================
+QUESTION 3: Monthly averages (1900-2015)
+=======================================================
+January    (month  1): 2.8150 C
+February   (month  2): 3.3307 C
+March      (month  3): 5.3957 C
+April      (month  4): 8.5368 C
+May        (month  5): 11.3948 C
+June       (month  6): 13.5401 C
+July       (month  7): 14.4491 C
+August     (month  8): 13.9585 C
+September  (month  9): 12.1667 C
+October    (month 10): 9.5271 C
+November   (month 11): 6.2232 C
+December   (month 12): 3.8119 C
+
+=======================================================
+QUESTION 4: Hottest and coldest month recorded
+=======================================================
+Hottest month : Jul 1761  (19.0210 C)
+Coldest month : Jan 1768  (-2.0800 C)
+
+=======================================================
+QUESTION 5: Hottest and coldest year (1760-2015)
+=======================================================
+Hottest year : 2015  (9.8310 C average)
+Coldest year : 1768  (6.7813 C average)
+
+=======================================================
+QUESTION 6: GNUPlot - Yearly averages line plot
+=======================================================
+Data file : data/q6_data.dat
+Script    : scripts/q6_plot.gnu
+Run: gnuplot scripts/q6_plot.gnu
+
+=======================================================
+QUESTION 7: GNUPlot - 19th vs 20th century line plots
+=======================================================
+Data file : data/q7_data.dat
+Script    : scripts/q7_plot.gnu
+Run: gnuplot scripts/q7_plot.gnu
+
+=======================================================
+QUESTION 8: GNUPlot - Avg/Max/Min temperatures 1850-2015
+=======================================================
+Data file : data/q8_data.dat
+Script    : scripts/q8_plot.gnu
+Run: gnuplot scripts/q8_plot.gnu
+
+=======================================================
+QUESTION 9: GNUPlot - Bar plots Avg/Max/Min per century
+=======================================================
+Data file : data/q9_data.dat
+Script    : scripts/q9_plot.gnu
+Run: gnuplot scripts/q9_plot.gnu
+
+=======================================================
+QUESTION 10: GNUPlot - Error bar plot (2000-2015)
+=======================================================
+Data file : data/q10_data.dat
+Script    : scripts/q10_plot.gnu
+Run: gnuplot scripts/q10_plot.gnu
+
+=======================================================
+QUESTION 11: GNUPlot - Land vs Land+Ocean 1850-2015
+=======================================================
+Data file : data/q11_data.dat
+Script    : scripts/q11_plot.gnu
+Run: gnuplot scripts/q11_plot.gnu
+
+=======================================================
+All questions answered. GNUPlot scripts generated.
+To generate all graphs, run:
+  gnuplot scripts/q6_plot.gnu
+  gnuplot scripts/q7_plot.gnu
+  gnuplot scripts/q8_plot.gnu
+  gnuplot scripts/q9_plot.gnu
+  gnuplot scripts/q10_plot.gnu
+  gnuplot scripts/q11_plot.gnu
+=======================================================
