@@ -53,7 +53,7 @@ int    nRecords = 0;
 static int parseDouble(const char *s, double *out) {
     if (s == NULL || s[0] == '\0') return 0;
     char *end;
-    *out = strtod(s, &end);
+    *out = strtod(s, &end);//strtod: converts an initial portion of a string to a double-precision floating-point value
     return (end != s);  /* 1 = success */
 }
 
@@ -61,15 +61,16 @@ static int parseDouble(const char *s, double *out) {
 /*  Load CSV                                                            */
 /* ------------------------------------------------------------------ */
 void loadCSV(const char *filename) {
-    FILE *fp = fopen(filename, "r");
-    if (!fp) {
-        fprintf(stderr, "ERROR: Cannot open %s\n", filename);
+    FILE *fp = fopen(filename, "r");//fp: file pointer, fopen: opens the file specified by filename and returns a pointer to the file stream
+    if (!fp) {//r: read mode, if the file cannot be opened, fopen returns NULL
+        fprintf(stderr, "ERROR: Cannot open %s\n", filename);//error message printed to standard error stream if the file cannot be opened
         exit(1);
     }
 
-    char line[1024];
+    char line[1024];//line: buffer to hold each line read from the file, 1024 is an arbitrary size that should be sufficient for the lines in the CSV file
     /* skip header */
-    fgets(line, sizeof(line), fp);
+    fgets(line, sizeof(line), fp);//gets: reads a line from the specified stream and stores it in the string pointed to by line,
+    //up to a maximum of sizeof(line) - 1 characters. This is used to skip the header line of the CSV file.
 
     while (fgets(line, sizeof(line), fp)) {
         /* Remove trailing newline / carriage return */
@@ -282,7 +283,7 @@ void question6(void) {
     printf("=======================================================\n");
 
     /* Write data file */
-    FILE *df = fopen("q6_data.dat", "w");
+    FILE *df = fopen("data/q6_data.dat", "w");
     fprintf(df, "# Year  LandAvgTemp\n");
     for (int y = 1760; y <= 2015; y++) {
         double sum = 0.0; int cnt = 0;
@@ -297,21 +298,21 @@ void question6(void) {
     fclose(df);
 
     /* Write GNUPlot script */
-    FILE *gp = fopen("q6_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q6_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 6\n");
     fprintf(gp, "set terminal pngcairo size 1000,600 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q6_yearly_avg.png'\n");
+    fprintf(gp, "set output 'report/q6_yearly_avg.png'\n");
     fprintf(gp, "set title 'Yearly Average Land Temperature (1760-2015)' font 'Arial,14'\n");
     fprintf(gp, "set xlabel 'Year'\n");
     fprintf(gp, "set ylabel 'Average Temperature (°C)'\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set key top left\n");
-    fprintf(gp, "plot 'q6_data.dat' using 1:2 with lines lw 2 lc rgb 'red' title 'Land Avg Temp'\n");
+    fprintf(gp, "plot 'data/q6_data.dat' using 1:2 with lines lw 2 lc rgb 'red' title 'Land Avg Temp'\n");
     fclose(gp);
 
-    printf("Data file : q6_data.dat\n");
-    printf("Script    : q6_plot.gnu\n");
-    printf("Run: gnuplot q6_plot.gnu\n\n");
+    printf("Data file : data/q6_data.dat\n");
+    printf("Script    : scripts/q6_plot.gnu\n");
+    printf("Run: gnuplot scripts/q6_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -325,7 +326,7 @@ void question7(void) {
     printf("=======================================================\n");
 
     /* Build yearly averages for 19th (1800-1899) and 20th (1900-1999) */
-    FILE *df = fopen("q7_data.dat", "w");
+    FILE *df = fopen("data/q7_data.dat", "w");
     fprintf(df, "# RelYear  19thCentury  20thCentury\n");
     for (int rel = 0; rel <= 99; rel++) {
         int y19 = 1800 + rel;
@@ -348,7 +349,7 @@ void question7(void) {
     fclose(df);
 
     /* Rewrite data file properly (simpler approach) */
-    df = fopen("q7_data.dat", "w");
+    df = fopen("data/q7_data.dat", "w");
     fprintf(df, "# RelYear  19thCentury  20thCentury\n");
     for (int rel = 0; rel <= 99; rel++) {
         int y19 = 1800 + rel;
@@ -368,22 +369,22 @@ void question7(void) {
     }
     fclose(df);
 
-    FILE *gp = fopen("q7_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q7_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 7\n");
     fprintf(gp, "set terminal pngcairo size 1000,600 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q7_century_comparison.png'\n");
+    fprintf(gp, "set output 'report/q7_century_comparison.png'\n");
     fprintf(gp, "set title '19th vs 20th Century Land Average Temperatures' font 'Arial,14'\n");
     fprintf(gp, "set xlabel 'Year within Century'\n");
     fprintf(gp, "set ylabel 'Average Temperature (°C)'\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set key top left\n");
-    fprintf(gp, "plot 'q7_data.dat' using 1:2 with lines lw 2 lc rgb 'blue'  title '19th Century (1800-1899)', \\\n");
-    fprintf(gp, "     'q7_data.dat' using 1:3 with lines lw 2 lc rgb 'red'   title '20th Century (1900-1999)'\n");
+    fprintf(gp, "plot 'data/q7_data.dat' using 1:2 with lines lw 2 lc rgb 'blue'  title '19th Century (1800-1899)', \\\n");
+    fprintf(gp, "     'data/q7_data.dat' using 1:3 with lines lw 2 lc rgb 'red'   title '20th Century (1900-1999)'\n");
     fclose(gp);
 
-    printf("Data file : q7_data.dat\n");
-    printf("Script    : q7_plot.gnu\n");
-    printf("Run: gnuplot q7_plot.gnu\n\n");
+    printf("Data file : data/q7_data.dat\n");
+    printf("Script    : scripts/q7_plot.gnu\n");
+    printf("Run: gnuplot scripts/q7_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -395,7 +396,7 @@ void question8(void) {
     printf("QUESTION 8: GNUPlot - Avg/Max/Min temperatures 1850-2015\n");
     printf("=======================================================\n");
 
-    FILE *df = fopen("q8_data.dat", "w");
+    FILE *df = fopen("data/q8_data.dat", "w");
     fprintf(df, "# Year  LandAvg  LandMax  LandMin\n");
     for (int y = 1850; y <= 2015; y++) {
         double sumA=0,sumX=0,sumN=0;
@@ -419,7 +420,7 @@ void question8(void) {
     fclose(df);
 
     /* Rewrite cleanly */
-    df = fopen("q8_data.dat", "w");
+    df = fopen("data/q8_data.dat", "w");
     fprintf(df, "# Year  LandAvg  LandMax  LandMin\n");
     for (int y = 1850; y <= 2015; y++) {
         double sumA=0,sumX=0,sumN=0;
@@ -443,23 +444,23 @@ void question8(void) {
     }
     fclose(df);
 
-    FILE *gp = fopen("q8_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q8_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 8\n");
     fprintf(gp, "set terminal pngcairo size 1000,600 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q8_avg_max_min.png'\n");
+    fprintf(gp, "set output 'report/q8_avg_max_min.png'\n");
     fprintf(gp, "set title 'Land Temperature: Average, Max, and Min (1850-2015)' font 'Arial,14'\n");
     fprintf(gp, "set xlabel 'Year'\n");
     fprintf(gp, "set ylabel 'Temperature (°C)'\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set key top left\n");
-    fprintf(gp, "plot 'q8_data.dat' using 1:2 with lines lw 3 lc rgb 'red'   title 'Land Avg Temp', \\\n");
-    fprintf(gp, "     'q8_data.dat' using 1:3 with lines lw 1 lc rgb 'orange' dt 2 title 'Land Max Temp', \\\n");
-    fprintf(gp, "     'q8_data.dat' using 1:4 with lines lw 1 lc rgb 'blue'  dt 2 title 'Land Min Temp'\n");
+    fprintf(gp, "plot 'data/q8_data.dat' using 1:2 with lines lw 3 lc rgb 'red'   title 'Land Avg Temp', \\\n");
+    fprintf(gp, "     'data/q8_data.dat' using 1:3 with lines lw 1 lc rgb 'orange' dt 2 title 'Land Max Temp', \\\n");
+    fprintf(gp, "     'data/q8_data.dat' using 1:4 with lines lw 1 lc rgb 'blue'  dt 2 title 'Land Min Temp'\n");
     fclose(gp);
 
-    printf("Data file : q8_data.dat\n");
-    printf("Script    : q8_plot.gnu\n");
-    printf("Run: gnuplot q8_plot.gnu\n\n");
+    printf("Data file : data/q8_data.dat\n");
+    printf("Script    : scripts/q8_plot.gnu\n");
+    printf("Run: gnuplot scripts/q8_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -476,7 +477,7 @@ void question9(void) {
     int ranges[3][2] = {{1851,1899},{1900,1999},{2000,2015}};
     const char *cenLabels[] = {"19th (1851-1899)","20th (1900-1999)","21st (2000-2015)"};
 
-    FILE *df = fopen("q9_data.dat", "w");
+    FILE *df = fopen("data/q9_data.dat", "w");
     fprintf(df, "# Century  AvgTemp  MaxTemp  MinTemp\n");
     for (int c = 0; c < 3; c++) {
         double sumA=0,sumX=0,sumN=0;
@@ -495,10 +496,10 @@ void question9(void) {
     }
     fclose(df);
 
-    FILE *gp = fopen("q9_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q9_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 9\n");
     fprintf(gp, "set terminal pngcairo size 1200,900 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q9_bar_plots.png'\n");
+    fprintf(gp, "set output 'report/q9_bar_plots.png'\n");
     fprintf(gp, "set multiplot layout 1,3 title 'Average, Max, and Min Temperatures by Century' font 'Arial,14'\n");
     fprintf(gp, "set style data histogram\n");
     fprintf(gp, "set style fill solid 1.0 border -1\n");
@@ -508,19 +509,19 @@ void question9(void) {
     fprintf(gp, "set yrange [0:*]\n");
     /* Subplot 1: Average */
     fprintf(gp, "set title 'Average Land Temperature'\n");
-    fprintf(gp, "plot 'q9_data.dat' using 2:xtic(1) lc rgb 'steelblue'  title 'Average'\n");
+    fprintf(gp, "plot 'data/q9_data.dat' using 2:xtic(1) lc rgb 'steelblue'  title 'Average'\n");
     /* Subplot 2: Max */
     fprintf(gp, "set title 'Max Land Temperature'\n");
-    fprintf(gp, "plot 'q9_data.dat' using 3:xtic(1) lc rgb 'red'        title 'Max'\n");
+    fprintf(gp, "plot 'data/q9_data.dat' using 3:xtic(1) lc rgb 'red'        title 'Max'\n");
     /* Subplot 3: Min */
     fprintf(gp, "set title 'Min Land Temperature'\n");
-    fprintf(gp, "plot 'q9_data.dat' using 4:xtic(1) lc rgb 'navy'   title 'Min'\n");
+    fprintf(gp, "plot 'data/q9_data.dat' using 4:xtic(1) lc rgb 'navy'   title 'Min'\n");
     fprintf(gp, "unset multiplot\n");
     fclose(gp);
 
-    printf("Data file : q9_data.dat\n");
-    printf("Script    : q9_plot.gnu\n");
-    printf("Run: gnuplot q9_plot.gnu\n\n");
+    printf("Data file : data/q9_data.dat\n");
+    printf("Script    : scripts/q9_plot.gnu\n");
+    printf("Run: gnuplot scripts/q9_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -532,7 +533,8 @@ void question10(void) {
     printf("QUESTION 10: GNUPlot - Error bar plot (2000-2015)\n");
     printf("=======================================================\n");
 
-    FILE *df = fopen("q10_data.dat", "w");
+    FILE *df = fopen("data/q10_data.dat", "w");//w: write mode, if the file already exists, it will be truncated to zero length,
+    //and the program will start writing from the beginning of the file. If the file does not exist, it will be created.
     fprintf(df, "# Month  AvgTemp  AvgUncertainty\n");
 
     const char *monthNames[] = {"Jan","Feb","Mar","Apr","May","Jun",
@@ -556,10 +558,10 @@ void question10(void) {
     }
     fclose(df);
 
-    FILE *gp = fopen("q10_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q10_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 10\n");
     fprintf(gp, "set terminal pngcairo size 1000,600 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q10_errorbars.png'\n");
+    fprintf(gp, "set output 'report/q10_errorbars.png'\n");
     fprintf(gp, "set title 'Average Monthly Land Temperature with Error Bars (2000-2015)' font 'Arial,14'\n");
     fprintf(gp, "set xlabel 'Month'\n");
     fprintf(gp, "set ylabel 'Temperature (°C)'\n");
@@ -567,12 +569,12 @@ void question10(void) {
     fprintf(gp, "           'Jul' 7, 'Aug' 8, 'Sep' 9, 'Oct' 10, 'Nov' 11, 'Dec' 12)\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set key top right\n");
-    fprintf(gp, "plot 'q10_data.dat' using 1:2:3 with yerrorbars lw 2 lc rgb 'dark-green' pt 7 title 'Avg Temp ± Uncertainty'\n");
+    fprintf(gp, "plot 'data/q10_data.dat' using 1:2:3 with yerrorbars lw 2 lc rgb 'dark-green' pt 7 title 'Avg Temp ± Uncertainty'\n");
     fclose(gp);
 
-    printf("Data file : q10_data.dat\n");
-    printf("Script    : q10_plot.gnu\n");
-    printf("Run: gnuplot q10_plot.gnu\n\n");
+    printf("Data file : data/q10_data.dat\n");
+    printf("Script    : scripts/q10_plot.gnu\n");
+    printf("Run: gnuplot scripts/q10_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -584,7 +586,7 @@ void question11(void) {
     printf("QUESTION 11: GNUPlot - Land vs Land+Ocean 1850-2015\n");
     printf("=======================================================\n");
 
-    FILE *df = fopen("q11_data.dat", "w");
+    FILE *df = fopen("data/q11_data.dat", "w");
     fprintf(df, "# Year  LandAvg  LandOceanAvg\n");
     for (int y = 1850; y <= 2015; y++) {
         double sumA=0, sumO=0;
@@ -601,22 +603,22 @@ void question11(void) {
     }
     fclose(df);
 
-    FILE *gp = fopen("q11_plot.gnu", "w");
+    FILE *gp = fopen("scripts/q11_plot.gnu", "w");
     fprintf(gp, "# GNUPlot script for Question 11\n");
     fprintf(gp, "set terminal pngcairo size 1000,600 enhanced font 'Arial,12'\n");
-    fprintf(gp, "set output 'q11_land_vs_ocean.png'\n");
+    fprintf(gp, "set output 'report/q11_land_vs_ocean.png'\n");
     fprintf(gp, "set title 'Land vs Land+Ocean Average Temperature (1850-2015)' font 'Arial,14'\n");
     fprintf(gp, "set xlabel 'Year'\n");
     fprintf(gp, "set ylabel 'Average Temperature (°C)'\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set key top left\n");
-    fprintf(gp, "plot 'q11_data.dat' using 1:2 with lines lw 2 lc rgb 'red'  title 'Land Average Temp', \\\n");
-    fprintf(gp, "     'q11_data.dat' using 1:3 with lines lw 2 lc rgb 'blue' title 'Land+Ocean Average Temp'\n");
+    fprintf(gp, "plot 'data/q11_data.dat' using 1:2 with lines lw 2 lc rgb 'red'  title 'Land Average Temp', \\\n");
+    fprintf(gp, "     'data/q11_data.dat' using 1:3 with lines lw 2 lc rgb 'blue' title 'Land+Ocean Average Temp'\n");
     fclose(gp);
 
-    printf("Data file : q11_data.dat\n");
-    printf("Script    : q11_plot.gnu\n");
-    printf("Run: gnuplot q11_plot.gnu\n\n");
+    printf("Data file : data/q11_data.dat\n");
+    printf("Script    : scripts/q11_plot.gnu\n");
+    printf("Run: gnuplot scripts/q11_plot.gnu\n\n");
 }
 
 /* ================================================================== */
@@ -624,7 +626,7 @@ void question11(void) {
 /* ================================================================== */
 int main(void) {
     /* Load data - adjust path as needed */
-    loadCSV("GlobalTemperatures.csv");
+    loadCSV("data/GlobalTemperatures.csv");
 
     /* Answer all questions */
     question1();
@@ -642,12 +644,12 @@ int main(void) {
     printf("=======================================================\n");
     printf("All questions answered. GNUPlot scripts generated.\n");
     printf("To generate all graphs, run:\n");
-    printf("  gnuplot q6_plot.gnu\n");
-    printf("  gnuplot q7_plot.gnu\n");
-    printf("  gnuplot q8_plot.gnu\n");
-    printf("  gnuplot q9_plot.gnu\n");
-    printf("  gnuplot q10_plot.gnu\n");
-    printf("  gnuplot q11_plot.gnu\n");
+    printf("  gnuplot scripts/q6_plot.gnu\n");
+    printf("  gnuplot scripts/q7_plot.gnu\n");
+    printf("  gnuplot scripts/q8_plot.gnu\n");
+    printf("  gnuplot scripts/q9_plot.gnu\n");
+    printf("  gnuplot scripts/q10_plot.gnu\n");
+    printf("  gnuplot scripts/q11_plot.gnu\n");
     printf("=======================================================\n");
 
     return 0;
