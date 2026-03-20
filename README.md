@@ -1,7 +1,5 @@
 # 🌡️ Global Temperature Analysis
 
----
-
 ## 📁 Project Structure
 
 ```
