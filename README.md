@@ -1,5 +1,22 @@
 # 🌡️ Global Temperature Analysis
 
+🧭 About the Project
+Climate change is one of the most discussed topics of our time, but the data behind it spans centuries. This project works with a real-world dataset compiled from weather monitoring stations around the world, recording monthly land and ocean surface temperatures from 1750 all the way to 2015 — over 265 years of climate history.
+The goal is to explore that data programmatically: calculate averages across years, months, and centuries, identify temperature extremes, and visualise long-term trends. The results reveal a clear and measurable warming pattern, particularly from the 20th century onward, with the 21st century average already sitting more than 1.5 °C above the 19th century baseline.
+The dataset is sourced from Berkeley Earth and distributed as a CSV file containing monthly records for land average, land max, land min, and combined land+ocean temperatures, along with uncertainty values for each measurement.
+
+---
+
+⚙️ How It Works
+The entire pipeline runs from a single C program (project.c):
+
+Data ingestion — the program opens and reads GlobalTemperatures.csv line by line, parsing each date and converting string values to doubles. Empty fields (missing measurements) are detected and safely skipped.
+Computation — all statistics are calculated in C: yearly averages, century averages, monthly averages, and the identification of extreme records. No spreadsheet tools or external libraries are used — just arrays, loops, and standard C math.
+Data file generation — for each graph question (Q6–Q11), the program writes a .dat file containing only the processed numbers GNUPlot needs, formatted as whitespace-separated columns.
+GNUPlot scripting — the program also writes a .gnu script for each graph, with titles, axis labels, colours, line styles, and legends fully configured. Running gnuplot <script> produces a publication-ready .png with no manual editing required.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -55,7 +72,7 @@ gnuplot scripts/q11_plot.gnu
 | Q1 | Yearly averages — 1760 to 2015 | Terminal |
 | Q2 | Average temperature per century | Terminal |
 | Q3 | Monthly averages across 1900–2015 | Terminal |
-| Q4 | Hottest and coldest month ever recorded | Terminal |
+| Q4 | Hottest and coldest month ever recorded | Terminal 
 | Q5 | Hottest and coldest year | Terminal |
 | Q6 | Line plot — yearly avg temperature | `q6_yearly_avg.png` |
 | Q7 | Line plot — 19th vs 20th century | `q7_century_comparison.png` |
