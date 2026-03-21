@@ -1,6 +1,7 @@
 # 🌡️ Global Temperature Analysis
 
 🧭 About the Project
+
 Climate change is one of the most discussed topics of our time, but the data behind it spans centuries. This project works with a real-world dataset compiled from weather monitoring stations around the world, recording monthly land and ocean surface temperatures from 1750 all the way to 2015 — over 265 years of climate history.
 The goal is to explore that data programmatically: calculate averages across years, months, and centuries, identify temperature extremes, and visualise long-term trends. The results reveal a clear and measurable warming pattern, particularly from the 20th century onward, with the 21st century average already sitting more than 1.5 °C above the 19th century baseline.
 The dataset is sourced from Berkeley Earth and distributed as a CSV file containing monthly records for land average, land max, land min, and combined land+ocean temperatures, along with uncertainty values for each measurement.
@@ -8,6 +9,7 @@ The dataset is sourced from Berkeley Earth and distributed as a CSV file contain
 ---
 
 ⚙️ How It Works
+
 The entire pipeline runs from a single C program (project.c):
 
 Data ingestion — the program opens and reads GlobalTemperatures.csv line by line, parsing each date and converting string values to doubles. Empty fields (missing measurements) are detected and safely skipped.
